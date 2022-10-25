@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+{% block content %}
+<script>
+  window.onload = function () {
+    let currentLoggedInUser = window.localStorage.getItem("users");
+    currentLoggedInUser = JSON.parse(currentLoggedInUser);
+    console.log(currentLoggedInUser);
+    for (const userData in currentLoggedInUser) {
+      // document.getElementById(userData.username).onclick = function () {
+      //   console.log(".....oppening Chat");
+      //   location.href = "/home/";
+      // };
+    }
+    
+  };
+</script>
+// At present this data is only for project purpose not to show publically
+<div id="google_translate_element"></div>
+<script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+</script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+<div class="topnav">
+  <form method="post" action="/PatientDetails/">
+    <input type="text" placeholder="Search.." id="searchInput" name="searchInput">
+    <input id="my_submit" type="submit" value="Submit">
+  </form>
+ 
+</div>
+<br />
+<table id="tableContent">
+    <tr>
+      <th>name</th>
+      <!-- <th>image</th> -->
+      <th>SufferingFrom</th>
+      <th>area</th>
+      <th>state</th>
+      <th>adress</th>
+      <th>Hospital_Contacts</th>
+      <th>location</th>
+    </tr>
+    {% for row in rows %}
+    <tr>
+      <td id={{row.name}}>{{ row.name }}</td>
+      <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.name }}" height=100 width=200></td> -->
+      <td>{{ row.SufferingFrom }}</td>
+      <td>{{ row.area }}</td>
+      <td>{{ row.state }}</td>
+      <td>{{ row.address }}</td>
+      <td>{{ row.Hospital_Contacts }}</td>
+      <td><a href={{url_for('location')}}>location</a></td>
+    </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

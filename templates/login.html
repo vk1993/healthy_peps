@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+<script>
+  window.onload = function () {
+      document.getElementById("myButton").onclick = function () {
+        console.log("loggedIN");
+
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        let person = window.localStorage.getItem('users');
+        if (person == null) {
+          window.localStorage.setItem('users', JSON.stringify([{ username, password }]));
+        } else {
+          person = JSON.parse(person)
+          let updatedPerson = [{ username, password }, ...person]
+          window.localStorage.setItem('users', JSON.stringify(updatedPerson));
+        }
+        sessionStorage.setItem("currentloggedin", username);
+        location.href = "/home/";
+      };
+    };
+</script>
+<div class="login-form">
+    <form>
+      <h1>Login</h1>
+      <div class="content">
+        <div class="input-field">
+          <input type="email" id="username" placeholder="Email" autocomplete="nope">
+        </div>
+        <div class="input-field">
+          <input type="password"id="password" placeholder="Password" autocomplete="new-password">
+        </div>
+        <a href="#" class="link">Forgot Your Password?</a>
+      </div>
+      <div class="action">
+        <button>Register</button>
+        <button id="myButton">Sign in</button>
+      </div>
+    </form>
+  </div>
+  <!-- partial -->
+{% endblock %}
