@@ -1,5 +1,6 @@
 [{
-      "name": "Sukhdev",
+      "userName":"Sukhdev12312",
+      "name":"Sukhdev",
       "SufferingFrom": "Diabetes",
       "area": "7th Camp",
       "state": "karnataka",
@@ -8,7 +9,8 @@
       "locations": ""
       },
      {  
-      "name": "Amit sahoo",
+      "userName":"Amitsahoo12312",
+      "name": "Amit sahoo",   
       "SufferingFrom": "Diabetes",
       "area": "7th Camp",
       "state": "karnataka",
@@ -18,7 +20,8 @@
       },
 
       {
-      "name": "Hareesh",
+      "userName":"hareesh1232",
+"name":  "Hareesh",
       "SufferingFrom": "Diabetes",
       "area": "7th Camp",
       "state": "karnataka",
@@ -28,7 +31,8 @@
       },
 
       {
-      "name": "Kritika",
+      "userName":
+"name": : "Kritika",
       "SufferingFrom": "Diabetes",
       "area": "7th Camp",
       "state": "karnataka",
@@ -38,7 +42,8 @@
       },
 
       {
-      "name": "Gautam",
+      "userName":
+"name": : "Gautam",
       "SufferingFrom": "Diabetes",
       "area": "7th Camp",
       "state": "Karnataka",
@@ -48,7 +53,8 @@
       }, 
       
       {
-      "name": "Adinarayana Verma",
+      "userName":
+"name": : "Adinarayana Verma",
       "SufferingFrom": "Diabetes",
       "area": "Officer's Enclave",
       "state": "Karnataka",
@@ -58,7 +64,8 @@
       }, 
 
       {
-      "name": "Daksh Lal Gupta ",
+      "userName":
+"name": : "Daksh Lal Gupta ",
       "SufferingFrom": "Diabetes",
       "area": "Officer's Enclave",
       "state": "Karnataka",
@@ -68,7 +75,8 @@
       },
       
       {
-      "name": "Vijay",
+      "userName":
+"name": : "Vijay",
       "SufferingFrom": "Diabetes",
       "area": "Officer's Enclave ",
       "state": "Karnataka",
@@ -77,7 +85,8 @@
       "locations": ""
       }, 
       { 
-      "name": "Raghavendra Gowda",
+      "userName":
+"name": : "Raghavendra Gowda",
       "SufferingFrom": "Diabetes",
       "area": "Kalathur layout",
       "state": "Karnataka",
@@ -86,7 +95,8 @@
       "locations": ""
       }, 
       { 
-      "name": "Kartik Chaurvedi",
+      "userName":
+"name": : "Kartik Chaurvedi",
       "SufferingFrom": "Diabetes",
       "area": "Kalathur layout",
       "state": "Karnataka",
@@ -95,7 +105,8 @@
       "locations": ""
       } ,
       {
-      "name": "Brijesh Agarwal",
+      "userName":
+"name": : "Brijesh Agarwal",
       "SufferingFrom": "Diabetes",
       "area": "Kalathur layout",
       "state": "Karnataka",
@@ -104,7 +115,8 @@
       "locations": ""
       } ,
       {
-      "name": "Indrajeet Mishra",
+      "userName":
+"name": : "Indrajeet Mishra",
       "SufferingFrom": "Diabetes",
       "area": "Kalathur layout",
       "state": "Karnataka",
@@ -113,7 +125,8 @@
       "locations": ""
       },
       {
-      "name": "Aditya Govil",
+      "userName":
+"name": : "Aditya Govil",
       "SufferingFrom": "Diabetes",
       "area": "Kalathur layout",
       "state": "Karnataka",
