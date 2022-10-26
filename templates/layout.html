@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>healthy peps</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+<style>
+    body {
+        background-image: url('C:\Users\Praveen Kumar\Documents\first\my project\bg.jpg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
+<!-- <script type="text/javascript">
+    document.getElementById("myButton").onclick = function () {
+        console.log("abcd")
+        location.href = "/home/";
+    };
+</script> -->
+
+    <!-- <style >
+        body {
+          font-family: 'playfair';
+        }
+        </style> -->
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+<header>
+<div class="container">
+<h1 class="logo" style="font-family: Copperplate, Papyrus, fantasy">Healthy peps</h1>
+
+<strong><nav>
+<ul class="menu">
+<li><a style="font-family: Copperplate, Papyrus, fantasy" href="{{ url_for('home') }}">Home</a></li>
+<li><a style="font-family: Copperplate, Papyrus, fantasy" href="{{ url_for('about') }}">About</a></li>
+<!-- <li><a href="{{ url_for('login') }}">login</a></li> -->
+<li><a style="font-family: Copperplate, Papyrus, fantasy" href="{{ url_for('PatientDetails') }}">PatientDetails</a></li>
+<li><a style="font-family: Copperplate, Papyrus, fantasy" href="{{ url_for('FAQs') }}">FAQs</a></li>
+<!-- <li><a href="{{ url_for('location') }}">Location</a></li> -->
+<div id="google_translate_element"></div>
+ 
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
+ 
+    <script type="text/javascript"
+            src=
+"https://translate.google.com/translate_a/element.js?
+cb=googleTranslateElementInit">
+    </script>
+</ul>
+</nav></strong>
+</div>
+</header>
+<div class="container">
+{% block content %}
+{% endblock %}
+</div>
+<script src="{{url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
