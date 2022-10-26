@@ -40,7 +40,8 @@ cb=googleTranslateElementInit">
 <br />
 <table id="tableContent">
     <tr>
-      <th>name</th>
+      <th>Name</th>
+      <th>Gender</th>
       <!-- <th>image</th> -->
       <th>SufferingFrom</th>
       <th>area</th>
@@ -51,8 +52,9 @@ cb=googleTranslateElementInit">
     </tr>
     {% for row in rows %}
     <tr>
-      <td id={{row.name}}>{{ row.name }}</td>
-      <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.name }}" height=100 width=200></td> -->
+      <td id={{row.Name}}>{{ row.Name }}</td>
+      <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.Name }}" height=100 width=200></td> -->
+      <td>{{row.Gender}}</td>
       <td>{{ row.SufferingFrom }}</td>
       <td>{{ row.area }}</td>
       <td>{{ row.state }}</td>
