@@ -509,3 +509,33 @@ img {
   height: 516px;
   overflow-y: auto;
 }
+.row1 {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column1 {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.row2 {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column2 {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.row3 {
+  display: flex;
+}
+
+/* Create two equal columns that sits next to each other */
+.column3 {
+  flex: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}

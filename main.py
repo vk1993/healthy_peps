@@ -73,4 +73,4 @@ def PatientDetails():
   return render_template('PatientDetails.html', rows=json_object)
 if __name__ == '__main__':
    port = os.environ.get("PORT",5000)
-   app.run(port=port,host = "0.0.0.0",debug=False)
+   app.run(port=port,host = "0.0.0.0",debug=True)
