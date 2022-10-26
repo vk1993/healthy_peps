@@ -1,6 +1,5 @@
 {% extends "layout.html" %}
 {% block content %}
-
 <div class="messaging">
   <div class="inbox_msg">
     <div class="inbox_people">
@@ -18,17 +17,33 @@
         </div>
       </div>
       <div class="inbox_chat">
-        {% for chat in recentRows %}
         <div class="chat_list active_chat">
           <div class="chat_people">
           <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="visal"> </div>
             <div class="chat_ib">
-              <h5>{{chat.name}} <span class="chat_date">{{chat.last_chat_date}}</span></h5>
-              <p>{{chat.message}}</p>
+              <h5>Visal<span class="chat_date">11:01 AM</span></h5>
+              <p>We work directly with our designers and suppliers</p>
             </div>
           </div>
         </div>
-        {% endfor %}
+        <div class="chat_list">
+          <div class="chat_people">
+            <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="visal"> </div>
+            <div class="chat_ib">
+              <h5>Usha<span class="chat_date">11:01 AM</span></h5>
+              <p>We work directly with our designers and suppliers</p>
+            </div>
+          </div>
+        </div>
+        <div class="chat_list">
+          <div class="chat_people">
+            <div class="chat_img"> <img src="https://ptetutorials.com/images/user-profile.png" alt="visal"> </div>
+            <div class="chat_ib">
+              <h5>Praveen<span class="chat_date">11:35 AM</span></h5>
+              <p>We work directly with our designers and suppliers</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="mesgs">

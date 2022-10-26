@@ -2,9 +2,9 @@
 {% block content %}
 <script>
   window.onload = function () {
+    sessionStorage.clear();
       document.getElementById("myButton").onclick = function () {
         console.log("loggedIN");
-
         var username = document.getElementById("username").value;
         var password = document.getElementById("password").value;
         let person = window.localStorage.getItem('users');
@@ -16,6 +16,13 @@
           window.localStorage.setItem('users', JSON.stringify(updatedPerson));
         }
         sessionStorage.setItem("currentloggedin", username);
+        $.ajax({
+          type: "POST",
+          url: "/pushData",
+          data: JSON.stringify(username),
+          contentType: "application/json",
+          dataType: 'json'
+        });
         location.href = "/home/";
       };
     };
