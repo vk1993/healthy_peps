@@ -2,16 +2,15 @@
 {% block content %}
 <script>
   window.onload = function () {
-    let currentLoggedInUser = window.localStorage.getItem("users");
-    currentLoggedInUser = JSON.parse(currentLoggedInUser);
+    let currentLoggedInUser = window.sessionStorage.getItem("currentloggedin");
     console.log(currentLoggedInUser);
-    for (const userData in currentLoggedInUser) {
-      // document.getElementById(userData.username).onclick = function () {
-      //   console.log(".....oppening Chat");
-      //   location.href = "/home/";
-      // };
-    }
-    
+    $.ajax({
+      type: "POST",
+      url: "/pushData",
+      data: JSON.stringify(currentLoggedInUser),
+      contentType: "application/json",
+      dataType: 'json'
+    });
   };
 </script>
 // At present this data is only for project purpose not to show publically
@@ -46,22 +45,42 @@ cb=googleTranslateElementInit">
       <th>SufferingFrom</th>
       <th>area</th>
       <th>state</th>
+      {% if role %}
       <th>adress</th>
+      {% endif %}
       <th>Important contacts</th>
       <th>location</th>
     </tr>
     {% for row in rows %}
     <tr>
-      <td id={{row.Name}}>{{ row.Name }}</td>
-      <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.Name }}" height=100 width=200></td> -->
-      <td>{{row.Gender}}</td>
+      <td id={{row.Name}} onclick="chat(event)">{{ row.Name }}</td>
+      <td>{{ row.Gender }}</td>
+      <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.name }}" height=100 width=200></td> -->
       <td>{{ row.SufferingFrom }}</td>
       <td>{{ row.area }}</td>
       <td>{{ row.state }}</td>
+      {% if role %}
       <td>{{ row.address }}</td>
+      {% endif %}
       <td>{{ row.Importantcontacts }}</td>
       <td><a href={{url_for('location')}}>location</a></td>
     </tr>
     {% endfor %}
   </table>
+  <script>
+     function chat(event) {
+      event.stopPropagation();
+      console.log(event);
+      // let clickedUser = event.target.textContent;
+      // let currentLoggedInUser = window.localStorage.getItem("users");
+      // currentLoggedInUser = JSON.parse(currentLoggedInUser);
+      // console.log(currentLoggedInUser);
+      // let filteredData = currentLoggedInUser.filter(function(el){
+      //   return el.username.toLowerCase() == clickedUser.toLowerCase();
+      // });
+      // if(filteredData) {
+        location.href = "/chat/";
+      // }
+    };
+  </script>
 {% endblock %}
