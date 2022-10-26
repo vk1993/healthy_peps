@@ -1,7 +1,5 @@
 from flask import Flask, render_template,request
-import urllib.request 
 import json
-from flask import Flask, render_template
 from flask_socketio import SocketIO
 import os
 
@@ -74,4 +72,5 @@ def PatientDetails():
     
   return render_template('PatientDetails.html', rows=json_object)
 if __name__ == '__main__':
-   app.run(port=5005,debug=True)
+   port = os.environ.get("PORT",5000)
+   app.run(port=port,host = "0.0.0.0",debug=False)
