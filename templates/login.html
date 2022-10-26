@@ -21,9 +21,11 @@
           url: "/pushData",
           data: JSON.stringify(username),
           contentType: "application/json",
-          dataType: 'json'
+          dataType: 'json',
+          complete: function(){
+            location.href = "/home/";
+          }
         });
-        location.href = "/home/";
       };
     };
 </script>

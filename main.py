@@ -82,25 +82,27 @@ def PatientDetails():
         return render_template('login.html')
   
     print(loggedInUser)
+    loggedInUserr = loggedInUser.lower()
     isAdmin = False
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
     json_url = os.path.join(SITE_ROOT, "static/data", "data.json")
     data = json.load(open(json_url))
     output_json = json.dumps(data)
     json_object= json.loads(output_json)
-  
-    if "admin" == loggedInUser.lower():
-        isAdmin = True
 
-    print("filtering")
+    print(request)
     if request.method == 'POST':
         strTextBoxVal = request.form['searchInput']
-        output_dict = [x for x in data if x['area'] == strTextBoxVal.lower()]
+        print(strTextBoxVal)
+        output_dict = [x for x in data if x['area'].lower() == strTextBoxVal.lower()]
         output_json = json.dumps(output_dict)
         json_object = json.loads(output_json)
         print(json_object)
         print(type(json_object))
-        
+
+    if loggedInUserr == "admin":
+        isAdmin = True
+
     return render_template('PatientDetails.html', rows=json_object, role=isAdmin)
 if __name__ == '__main__':
    port = os.environ.get("PORT",5000)
