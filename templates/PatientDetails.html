@@ -56,7 +56,9 @@ cb=googleTranslateElementInit">
     <tr>
       <td id={{row.Name}} onclick="chat(event)">{{ row.Name }}</td>
       <td>{{ row.Gender }}</td>
+      {% if role %}
       <td>{{ row.Age }}</td>
+      {% endif %}
       <!-- <td><img src="{{ row.imageURL }}" alt="{{ row.name }}" height=100 width=200></td> -->
       <td>{{ row.SufferingFrom }}</td>
       <td>{{ row.area }}</td>
